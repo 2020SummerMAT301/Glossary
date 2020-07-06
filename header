@@ -7,7 +7,7 @@
 \usepackage{collcell}
 
 % left column
-\newcolumntype{a}{>{\raggedleft\color{gray}\small\itshape}b{2.5cm}}
+\newcolumntype{a}{>{\raggedleft\color{gray}\small\itshape}b{2cm}}
 
 % cell height
 \renewcommand{\arraystretch}{1.5}
