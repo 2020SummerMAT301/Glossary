@@ -1,10 +1,7 @@
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs}
-\usepackage[margin=1.5in]{geometry} 
-
-\usepackage{xcolor}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{collcell}
+\usepackage{xcolor,array,multirow,collcell}
+\usepackage[margin=1.3in]{geometry} 
+\setlength{\parindent}{0pt}
 
 % left column
 \newcolumntype{a}{>{\raggedleft\color{gray}\small\itshape}b{2cm}}
@@ -15,13 +12,33 @@
 % fix spacing issues with enumerate
 \usepackage{enumitem}
 \newlist{tabenum}{enumerate}{1}
-\setlist[tabenum]{label=\arabic*. ,wide=0pt, leftmargin=*, itemsep=2pt, before=\vspace{-1.4\baselineskip}, after=\vspace{-1\baselineskip}}
+\setlist[tabenum]{label=\arabic*. ,
+wide=0pt,
+leftmargin=*,
+itemsep=2pt,
+before=\vspace{-1.4\baselineskip}, after=\vspace{-1\baselineskip},
+}
 
 % adjust References size
 \renewcommand{\refname}{\normalsize References}
 
+% math
+    % common sets
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\CC}{\mathbb{C}}
+
+    % relation symbols
+\let\le\leqslant\let\ge\geqslant % use \leq and \geq for the subgroup relation
+
+    % arrows
+\let\into\hookrightarrow % injection
+\let\onto\twoheadrightarrow % surjection
+\newcommand{\isto}{\stackrel{\sim}{\smash{\longrightarrow}\rule{0pt}{0.4ex}}} % bijection
+
+    % group actions
+\let\acts\curvearrowright 
+\let\racts\curvearrowleft 
+\newcommand{\act}{\mathbin{.}} % i like the curve arrow thing lol but yeah i see this more
