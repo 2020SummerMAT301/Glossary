@@ -2,37 +2,65 @@
 \input{header}
 
 \begin{document}
-\begin{tabular}{ap{10cm}}
-\multicolumn{2}{l}{{\large \bf word} ({\it x}.)} % replace 'word' by your word, and replace 'x' by 'n' or 'v' or 'a'  
-\\ variants   & % 'None' or a list
-\\ grammar    & % 'None' if adjective; 't.' or 'i.' if verb; 'pl.' if noun, followed by the plural form
-% or 'uncountable' if uncountable
-\\ definition & % write your one single definition here. 50 words max.
-\\ notations  & % 'None' or a list 
-\\ quotations & \begin{tabenum}
-	% edit these lines accordingly
-	\item ``First quote.''---Surname, 2000 (p.~1) 
-	\item ``Second quote.''---Surname, 2001 (p.~2)
-	\end{tabenum} 
-\\ relatives  & % 'None' or a list
+{\large \bf word} ({\it n}.)
+% Replace 'word' by your word, and replace 'n' by 'v' or 'a' or 'p' if necessary.
+\smallskip
+
+\begin{tabular}{ap{12cm}}
+variants & 
+worde
+% Replace 'worde' by 'None' or a comma-separated list, if applicable.
+% 
+\\ grammar & 
+{\it pl}.~words
+% If you have a noun, replace 'words' by the plural form, or replace that whole line with '{\it uncountable}' if that's the case. 
+% If you have a verb, replace 'pl' by 't' or 'i' and delete '~words'.
+% Otherwise, replace that whole line with 'None'.
+% 
+\\ definition &
+Replace this text with your definition.
+% Just write one definition of your word, in your own words; 50 words max.
+% 
+\\ notation & 
+None 
+% Replace 'None' by a list, if applicable.
+% 
+\\ quotations & 
+\begin{tabenum}
+	\item ``My {\bf word}!''
+	\newline\null\hfill---Surname, 2000 (p.~1) 
+	\item ``A {\bf word} of warning...''
+	\newline\null\hfill---Surname, 2001 (p.~2)%
+\end{tabenum}
+% Edit the \item lines accordingly. Adhere to the above format. Do not use \cite in this section.  
+% Please leave the final ')%' exactly how it is!
+% 
+\\ relatives & 
+term, lexeme
+% Replace that list by 'None' or a comma-separated list, if applicable.
+% 
 \\ commentary & 
-    % fill in each cell
-	% for line breaks, leave a blank line between
+The word ``word'' is really hard to define!
+% Replace that line with your commentary about your word.
+% To start a new paragraph, write '\smallskip' and press Enter twice, to leave at least one blank line of space between, like this: 
+% 
+% ...end of an old paragraph. \smallskip 
+% 
+% Beginning of a new paragraph...
+% 
+% (Uncomment those three lines to see the effect.)
+% Do not indent (there's not that much room).
 \end{tabular}
 
-% All the entries will be published together in one document for the whole class to see.  If you want your authorship to be indicated, then you should write your name below.  If you prefer to remain anonymous, then comment out the next 4 lines.
 \vspace{0.5ex}
 \begin{flushright}
 \footnotesize{contributed by ---}
 \end{flushright}
-
+% All submitted glossary entries will be published together in one document for the whole class to see.  If you want your authorship to be indicated, then you should do so here, replacing '---' with your name.  If you prefer to remain anonymous, then comment out or delete the above 4 lines.
 
 \bibliographystyle{abbrv}
 \nocite{*}
 
-\begin{small}
-\bibliography{word} % replace 'word' with the filename of your .bib file
-\end{small}
-
-
+{\small \bibliography{word}}
+% Replace 'word' with the filename of your .bib file (without the '.bib' part).
 \end{document}
